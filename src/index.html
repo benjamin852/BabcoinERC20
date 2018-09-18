@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="width: 650px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Babcoin ICO Sale</h1>
+                <hr />
+                <br />
+            </div>
+            <div id="loader">
+                <p class="text-center">Loading...</p>
+            </div>
+            <div id="content" class="text-center" style="display: none; ">
+                <h4>Babcoin (BABS): A new ERC20 token dedicated to the Maple Leafs and its head coach Mike Babcock</h4>
+                <p>
+                    Babcoin price is <span class="babcoin-price"></span> Ether.
+                    You currently have <span class="babcoin-balance"></span>&nbsp;BABS
+                </p>
+                <br />
+                <form onSubmit="App.buyBabcoins(); return false;" role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id="numberOfBabcoins" class="form-control input-lg" type="number" name="number"
+                                value="1" min="1" pattern="[0-9]">
+                            <!--pattern is only ints from 1-9 !-->
+                            </input>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary btn-lg">Buy Tokens</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <div class="progress">
+                    <div id="progress" class="progress-bar progress-bar-stripped active" aria-valuemin="0"
+                        aria-valuemax="100">
+                    </div>
+                </div>
+                <p> <span class="babcoins-sold"></span>/ <span class="babcoins-available"></span> Babcoins</p>
+                <hr>
+                <p id="accountAddress"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

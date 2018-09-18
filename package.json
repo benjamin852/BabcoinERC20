@@ -1,0 +1,23 @@
+{
+    "name": "babcoin-sale",
+    "version": "1.0.0",
+    "description": "The coach's coin",
+    "main": "truffle.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "BenW",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "2.4.0"
+    },
+    "dependencies": {
+        "truffle-contract": "^3.0.6",
+        "web3": "^1.0.0-beta.36",
+        "webpack": "4.2.0",
+        "webpack-dev-server": "^3.1.8"
+    }
+}
